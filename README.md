@@ -149,6 +149,7 @@ test('Discrete Cosine Transform (DCT) works on a block', () => {
   expect(result).toEqual(expectedDCTResult);
 });
 ```
+![Alt text](./assests/output.png)
 
 ## 🎯 Roadmap
 
@@ -168,7 +169,10 @@ Contributions are welcome! If you want to contribute to this project, please for
 4. Push to the branch (`git push origin feature/my-new-feature`).
 5. Create a new Pull Request.
 
+
+
 Please ensure that your code follows the existing style, includes unit tests, and does not break the build.
+
 
 ## 📜 License
 

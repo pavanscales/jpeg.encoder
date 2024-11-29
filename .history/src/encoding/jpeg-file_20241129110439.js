@@ -19,8 +19,8 @@
 
 
 
-const SOI = [0xFF, 0xD8]; 
-const EOI = [0xFF, 0xD9];  
+const SOI = [0xFF, 0xD8];  // Start of Image marker (JPEG header)
+const EOI = [0xFF, 0xD9];  // End of Image marker (JPEG footer)
 
 function createJPEGHeader() {
 
@@ -28,6 +28,7 @@ function createJPEGHeader() {
 }
 
 function createEOI() {
+  // End of Image marker (JPEG footer)
   return EOI;
 }
 

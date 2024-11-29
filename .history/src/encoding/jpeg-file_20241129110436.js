@@ -18,16 +18,19 @@
 
 
 
+// src/encoding/jpeg-file.js
 
-const SOI = [0xFF, 0xD8]; 
-const EOI = [0xFF, 0xD9];  
+const SOI = [0xFF, 0xD8];  // Start of Image marker (JPEG header)
+const EOI = [0xFF, 0xD9];  // End of Image marker (JPEG footer)
 
 function createJPEGHeader() {
+  // This is a very simplified example. JPEG headers will include a series of segments.
 
   return SOI;
 }
 
 function createEOI() {
+  // End of Image marker (JPEG footer)
   return EOI;
 }
 

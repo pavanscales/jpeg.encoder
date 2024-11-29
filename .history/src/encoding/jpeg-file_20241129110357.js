@@ -16,19 +16,6 @@
  */
 
 
+ of Image, Quantization, Hufman, etc.)
 
 
-
-const SOI = [0xFF, 0xD8]; 
-const EOI = [0xFF, 0xD9];  
-
-function createJPEGHeader() {
-
-  return SOI;
-}
-
-function createEOI() {
-  return EOI;
-}
-
-export { createJPEGHeader, createEOI };

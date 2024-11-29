@@ -28,6 +28,7 @@ function createJPEGHeader() {
 }
 
 function createEOI() {
+  // End of Image marker (JPEG footer)
   return EOI;
 }
 

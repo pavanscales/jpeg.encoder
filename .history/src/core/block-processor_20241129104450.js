@@ -1,6 +1,7 @@
 /*!
  * This code is belongs to Pawvan
  * 
+ * 
  * Rules:
  * 1. You can use, modify, and distribute this code freely for non-commercial purposes.
  * 2. Attribution must be provided in any derived works.
@@ -11,32 +12,22 @@
  * 7. Redistribution of the code must include authors notice.
  * 8. You cannot sublicense or sell this code.
  * 9. You may not use this code in any harmful or malicious way.
- * 
- *
- * For more details, please contact: [pawanpediredla@gmail.com]
+ *10. For more details, please contact: [pawanpediredla@gmail.com]
  */
 
-function dct2D(block){
-    const N=8;
-    const result = Array.from(
-        {
-            length:N
-        },()=>{Array(N).fill(0)})
 
-        for(let u=0;u<N;u++){
-            for(let v =0;v<N;v++){
-                let sum=0;
-                for(let x=0;x<N;x++)
-            for(let y=0;y<N;y++)
-{
-    sum+=block[x][y]*
-    Math.cos(((2 * x + 1) * u * Math.PI) / (2 * N)) *
-                Math.cos(((2 * y + 1) * v * Math.PI) / (2 * N));
-}                }
-result[u][v]=sum;
-        }
-
-}
-export  {
-    dct2D
-}
+ function splitIntoBlocks(image,blockSize=8){
+const blocks =[]
+const width = image[0].length;
+const height = image.length;
+for (let y = 0; y < height; y += blockSize) {
+    for (let x = 0; x < width; x += blockSize) {
+   const block =[]
+   for (let by = 0; by < blockSize; by++) {
+    const row=[]
+    for (let bx = 0; bx < blockSize; bx++) {
+    
+    }}
+   
+    }}
+ }

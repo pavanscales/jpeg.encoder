@@ -16,27 +16,21 @@
  * For more details, please contact: [pawanpediredla@gmail.com]
  */
 
-function dct2D(block){
-    const N=8;
-    const result = Array.from(
-        {
-            length:N
-        },()=>{Array(N).fill(0)})
 
-        for(let u=0;u<N;u++){
-            for(let v =0;v<N;v++){
-                let sum=0;
-                for(let x=0;x<N;x++)
-            for(let y=0;y<N;y++)
-{
-    sum+=block[x][y]*
-    Math.cos(((2 * x + 1) * u * Math.PI) / (2 * N)) *
-                Math.cos(((2 * y + 1) * v * Math.PI) / (2 * N));
-}                }
-result[u][v]=sum;
-        }
 
-}
-export  {
-    dct2D
+
+
+function loadImageData(url,data){
+    const img = new Image()
+
+    img.onload = function(){
+        const canvas  = document.createElement('canvas');
+        const ctx  = canvas.getContext('2d');
+        canvas.width =img.width
+    canvas.height =img.height;
+    ctx.drawImage(img, 0, 0);
+    const imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
+    
+    
+    }
 }

@@ -16,27 +16,41 @@
  * For more details, please contact: [pawanpediredla@gmail.com]
  */
 
-function dct2D(block){
+
+
+
+const quantizationMatrix = [
+    [16, 11, 10, 16, 24, 40, 51, 61],
+    [12, 12, 14, 19, 26, 58, 60, 55],
+    [14, 13, 16, 24, 40, 57, 69, 56],
+    [14, 17, 22, 29, 51, 87, 80, 62],
+    [18, 22, 37, 56, 68, 109, 103, 77],
+    [24, 35, 55, 64, 81, 104, 113, 92],
+    [49, 64, 78, 87, 103, 121, 120, 101],
+    [72, 92, 95, 98, 112, 100, 103, 99]
+  ];
+
+
+  function quantizeBlock(dctBlock){
+
+
+
+
     const N=8;
-    const result = Array.from(
-        {
-            length:N
-        },()=>{Array(N).fill(0)})
+    const quantized  = Array.from({
+        length:N
+    }
+,()=>Array(N).fill(0)
+)
+// this performs optimizations
+for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      quantized[i][j] = Math.round(dctBlock[i][j] / quantizationMatrix[i][j]);
+    }
+  }
 
-        for(let u=0;u<N;u++){
-            for(let v =0;v<N;v++){
-                let sum=0;
-                for(let x=0;x<N;x++)
-            for(let y=0;y<N;y++)
-{
-    sum+=block[x][y]*
-    Math.cos(((2 * x + 1) * u * Math.PI) / (2 * N)) *
-                Math.cos(((2 * y + 1) * v * Math.PI) / (2 * N));
-}                }
-result[u][v]=sum;
-        }
-
-}
-export  {
-    dct2D
-}
+return quantized
+  }
+  export {
+    quantizeBlock
+  }

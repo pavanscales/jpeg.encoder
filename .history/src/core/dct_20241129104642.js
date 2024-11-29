@@ -16,6 +16,7 @@
  * For more details, please contact: [pawanpediredla@gmail.com]
  */
 
+
 function dct2D(block){
     const N=8;
     const result = Array.from(
@@ -38,5 +39,5 @@ result[u][v]=sum;
 
 }
 export  {
-    dct2D
+    
 }

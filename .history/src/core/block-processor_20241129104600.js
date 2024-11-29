@@ -14,15 +14,29 @@
  * 9. You may not use this code in any harmful or malicious way.
  *10. For more details, please contact: [pawanpediredla@gmail.com]
  */
-
- function rgbToYCbCr(R,G,B){
-const Y=0.299 * R + 0.587 * G + 0.114 * B;  // Luminance (Y)
-const Cb =-0.168736 * R - 0.331264 * G + 0.5 * B + 128;  // Chrominance (Cb)
-const Cr = 0.5 * R - 0.418688 * G - 0.081312 * B + 128;  // Chrominance (Cr)
-return  {
-    Y,Cb,Cr
-}
- }
- export {
-    rgbToYCbCr
- };
+function splitIntoBlocks(image, blockSize = 8) {
+    const blocks = [];
+    const width = image[0].length;
+    const height = image.length;
+  
+    for (let y = 0; y < height; y += blockSize) {
+      for (let x = 0; x < width; x += blockSize) {
+        const block = [];
+        for (let by = 0; by < blockSize; by++) {
+          const row = [];
+          for (let bx = 0; bx < blockSize; bx++) {
+            if (y + by < height && x + bx < width) {
+              row.push(image[y + by][x + bx]);
+            }
+          }
+          block.push(row);
+        }
+        blocks.push(block);
+      }
+    }
+    return blocks;
+  }
+  
+  export { splitIntoBlocks };
+  
+ 

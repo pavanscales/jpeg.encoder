@@ -15,28 +15,6 @@
  *10. For more details, please contact: [pawanpediredla@gmail.com]
  */
 
- const huffmanTableDC = {
-    0: '00',
-    1: '01',
-    2: '10',
-    3: '11',
-  };
-  
-  const huffmanTableAC = {
-    0: '111111110000',
-    1: '111111110001',
-    2: '111111110010',
-    // More AC Huffman codes
-  };
-  
-  function encodeHuffmanDC(value) {
-    return huffmanTableDC[value] || '1010'; // For example, use '1010' for an unknown value
-  }
-  
-  function encodeHuffmanAC(value) {
-    return huffmanTableAC[value] || '0000'; // Similarly, handle AC coefficients
-  }
-  
-  export { encodeHuffmanDC, encodeHuffmanAC };
+ 
 
-
+ 

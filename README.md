@@ -191,7 +191,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or feedback about this project, feel free to reach out:
 
 - **Email**: pawanpediredla@gmail.com
-- **GitHub**: [github.com/pawvan/jpeg_encoder](https://github.com/pavanscales/jpeg.encoder.git)
+- **GitHub**: [github.com/pavanscales/jpeg_encoder](https://github.com/pavanscales/jpeg.encoder.git)
 
 ---
 

@@ -2,3 +2,7 @@ node_modules/
 dist/
 webpack-config.js
 .babelrc
+node_modules/
+dist/
+webpack-config.js
+.babelrc

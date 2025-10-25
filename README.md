@@ -5,7 +5,7 @@
 
 This project is a high-performance, from-scratch **JPEG Encoder/Decoder** written in JavaScript. It implements the entire JPEG compression pipeline, including image loading, color space conversion, discrete cosine transform (DCT), quantization, Huffman coding, and file construction. The project aims to educate and demonstrate the inner workings of the JPEG format while providing a robust utility for working with compressed image data.
 
-## 🚀 Features
+##  Features
 
 - **Complete JPEG Encoding Pipeline**:
   - Convert images from RGB to YCbCr color space.
@@ -22,7 +22,7 @@ This project is a high-performance, from-scratch **JPEG Encoder/Decoder** writte
 - **Modular Architecture**:
   - Each step of the JPEG encoding process is divided into small, reusable modules (image processing, DCT, quantization, Huffman coding, etc.).
 
-## 🏗️ Project Structure
+##  Project Structure
 
 The project is organized into the following directories:
 
@@ -151,13 +151,13 @@ test('Discrete Cosine Transform (DCT) works on a block', () => {
 ```
 ![Alt text](./assests/output.png)
 
-## 🎯 Roadmap
+##  Roadmap
 
 1. **JPEG Decoding**: Implement the decoding pipeline (inverse DCT, Huffman decoding, etc.).
 2. **Optimization**: Improve the performance of block processing and Huffman coding.
 3. **Compression Ratio Improvements**: Experiment with different quantization tables and Huffman code tables to improve compression ratio.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! If you want to contribute to this project, please fork the repository, make your changes, and create a pull request.
 
@@ -174,13 +174,13 @@ Contributions are welcome! If you want to contribute to this project, please for
 Please ensure that your code follows the existing style, includes unit tests, and does not break the build.
 
 
-## 📜 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📚 Resources
+##  Resources
 
 - **JPEG Specification**: [ISO/IEC 10918-1](https://www.iso.org/standard/19368.html)
 - **Huffman Coding**: [Wikipedia - Huffman Coding](https://en.wikipedia.org/wiki/Huffman_coding)

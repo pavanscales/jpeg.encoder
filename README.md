@@ -1,6 +1,3 @@
-
----
-
 # JPEG Encoder/Decoder
 
 This project is a high-performance, from-scratch **JPEG Encoder/Decoder** written in JavaScript. It implements the entire JPEG compression pipeline, including image loading, color space conversion, discrete cosine transform (DCT), quantization, Huffman coding, and file construction. The project aims to educate and demonstrate the inner workings of the JPEG format while providing a robust utility for working with compressed image data.
